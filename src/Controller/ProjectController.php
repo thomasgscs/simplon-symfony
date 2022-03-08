@@ -13,9 +13,11 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 class ProjectController extends AbstractController
 {
+    #[IsGranted('ROLE_USER')]
     #[Route('/project', name: 'app_project_index')]
     public function index(Request $request, ManagerRegistry $doctrine): Response
     {
