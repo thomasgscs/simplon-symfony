@@ -6,10 +6,25 @@
             <ul id="sidebarnav">
                 <!-- User Profile-->
                 <li class="sidebar-item pt-2">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/"
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ path('app_home') }}"
                        aria-expanded="false">
                         <i class="fa-solid fa-house" aria-hidden="true"></i>
                         <span class="hide-menu">Home</span>
+                    </a>
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ path('app_client_index') }}"
+                       aria-expanded="false">
+                        <i class="fa-solid fa-person" aria-hidden="true"></i>
+                        <span class="hide-menu">Client</span>
+                    </a>
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ path('app_developer_index') }}"
+                       aria-expanded="false">
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        <span class="hide-menu">Developer</span>
+                    </a>
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ path('app_project_index') }}"
+                       aria-expanded="false">
+                        <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+                        <span class="hide-menu">Project</span>
                     </a>
                 </li>
             </ul>

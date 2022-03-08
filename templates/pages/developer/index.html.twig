@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Developer{% endblock %}
+
+{% block body %}
+    <h3>Developers list</h2>
+    <table class="table text-nowrap">
+        <thead>
+        <tr>
+            <th class="border-top-0">Id</th>
+            <th class="border-top-0">Firstname</th>
+            <th class="border-top-0">Lastname</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for developer in developersList %}
+            <tr>
+                <td>{{ developer.id }}</td>
+                <td>{{ developer.firstName }}</td>
+                <td>{{ developer.lastName }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <h3>Create developer</h2>
+
+    {{ form(form) }}
+{% endblock %}
